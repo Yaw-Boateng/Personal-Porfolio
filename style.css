@@ -10,7 +10,7 @@
 
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #e6d8d8
+    background-color: #e1d7d5
 
 }
 
@@ -27,6 +27,7 @@ body{
     padding: 25px 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 transition: all 0.3s ease;
+z-index: 999;
 }
 
 .navbar.sticky{
@@ -108,7 +109,7 @@ color: crimson;
 
 .home .max-width .home-content{
     margin-left: 870px;
-    width:810px;
+    /* width:810px; */
 }
 
 .home .max-width .home-content .text-1{
@@ -162,6 +163,134 @@ color: #ffffff;
 transition: all 0.3s ease;
 }
 
+
+/* about page */
+
+.about, .service{
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.about .title::after{
+    content:"who I am";
+}
+
+.about .max-width .left img {
+height: 400px;
+width: 400px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .right{
+width: 55%;
+}
+
+.about .about-content .right .text{
+font-size: 25px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+color: crimson;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+}
+
+.about .about-content .right a{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 20px;
+    background-color: crimson;
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border:2px solid crimson;
+    transition: all 0.2s ease;
+}
+
+.about .about-content .right a:hover{
+color: crimson;
+background: none;
+}
+
+/* services styling */
+
+.services{
+    color: #ffffff;
+    background: #111;
+}
+
+.services .title::after{
+    content:"what I provide";
+    background: #111;
+}
+
+.services .title::before{
+    background: #ffffff;
+}
+
+
+
+
+/* similar styling  */
+section{
+    padding:100px 0;
+}
+
+section  .title{
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section .title::before{
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+    position: absolute;
+    font-size: 17px;
+    color: crimson;
+    bottom: -12px;
+    left: 50%;
+    padding: 5px;
+    background: #e6d8d8;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+
 /* responsive media query */
 @media (max-width: 1150px) {
     .max-width {
@@ -214,10 +343,38 @@ content: "\f00d";
     
     .home .max-width .home-content .text-3{
     font-size: 35px;
-    margin-
     }
    
-    
+    .about .about-content .column {
+    width: 50%;
+    }
 }
 
+@media(max-width:947px){
+  
 
+        .max-width{
+            max-width: 800px;
+        }
+
+        .about .about-content .column{
+            width: 100%;
+        }
+
+        .about .about-content .left{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto 60px;
+        }
+
+        .about .about-content .right{
+           flex:100%
+        }
+}
+
+@media(max-width:1104px){
+    .about .max-width .left img {
+        height: 350px;
+        width: 350px;
+        }
+}
