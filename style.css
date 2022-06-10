@@ -236,6 +236,10 @@ background: none;
     background: #111;
 }
 
+.services .title::before{
+    background: #ffffff;
+}
+
 .services .title::after{
     content:"what I provide";
     background: #111;
@@ -243,6 +247,33 @@ background: none;
 
 .services .title::before{
     background: #ffffff;
+}
+
+.services .service-content{
+    display: flex;
+    align-content: space-around;
+    align-items: center;
+}
+
+.services .service-content .card{
+    width: calc(33% - 20px);
+    height: 230px;
+        background: #222;
+        text-align: center;
+        border-radius: 6px;
+        padding: 30px;
+        cursor: pointer;
+        margin: 30px;
+}
+.services .service-content .card i{
+    font-size: 50px;
+    color: crimson;
+}
+
+.services .service-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px ;
 }
 
 
