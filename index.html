@@ -1,110 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Porfolio</title>
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="/style.css">
-    <script   src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="/assets/css/all.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://kit.fontawesome.com/f82c55f11e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="/images/logo.png" alt="my Logo" class="logo">
 
-    <nav class="navbar">
-        <div class="max-width">
-        <div class="logo">
-            <h1><a href="#">Porfo<span>lio.</span></a></h1>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>   
+      </nav>
+
+      <div class="header-text">
+        <p>UI/UX Designer</p>
+        <h1>Hi I am <span>Augustine</span>  <br>B. Asante from Ghana </h1>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<!------------------------------about-------------------------->
+  <div id="about">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="about-col-1">
+          <img src="/images/yaw uaw (1).jpeg" alt="my picture">
         </div>
 
-        
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Teams</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>Augustine is an individual with passion for acquiring practical knowledge in I.T. related fields.
+            Augustine also has strong interest in Website Development and Computer Security. He persists to learn new things and adapt to situations and challenges.
+            He loves to explore new ideas. As a part-time adventure, Augustine also design UI/UX, Flyers, sends bulk sms, create google forms and create motion graphics for 
+           small businesses and start-ups. At the moment, Augustine is only opened to remote work and internship opportunities within and outside Ghana. 
 
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-                       </div>
+           If your aim is to acquire the service of a result oriented individual who can apply practical leadership skills to help in the growth of your business in the 
+           fields of Graphic Designing, Collection Of Data Through Google Forms, Sending Of Bulk Information Through Bulk Sms, Frontend Development or UI/UX development and I.T.
+            Support then reach out to me via asantea176@gmai.com . I will be glad to help you achieve your business goals.</p>
 
-    </div>
-    </nav>  
-    
-    <!-- section part -->
-    <section class="home" id="home" >
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
 
-    <div class="max-width">
-    <div class="home-content">
-        <div class="text-1">Hello, my name is</div>
-        <div class="text-2">Yaw Boateng</div>
-        <div class="text-3">And I'm a <span>Designer</span></div>
-        <a href="#">Hire me</a>
-    </div>
-    </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>UI/UX</span><br>Designing Web/App Interfaces</li> 
+                  <li><span>Frontend Development</span><br> building the UI of websites </li>
+                  <li><span>Graphic Designing</span><br> Branding and flyer designs</li>
+                </ul>
+              </div>
 
-    </section>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span>2019 - 2023</span><br> Bsc. Information Technology at UCC</li> 
+                  <li><span>2022</span><br> Jnr Developer at Poqa Groups of companies </li>
+                  <li><span>2020</span><br> Graphic designer & Video Editor at Design Hub</li>
+                  <li><span>2021 - 2023</span><br> Media and Publicity Head at NUBS UCC</li>
+                  <li><span>2023</span><br> National Media and Publicity Head at NUBS Ghana</li>
+                </ul>
+              </div>
 
-    
-<!-- about section -->
-<section class="about" id="about" >
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>2015 - 2018</span><br>WASSCE CERTIFICATE (Swedru Senior High School)</li> 
+                  <li><span>2019 - 2023</span><br>degree in Bsc. Information Technology</li> 
+                  <li><span>2019</span><br>Office Suite Certificate from Alison </li>
+                  <li><span>2021</span><br>UI/UX at Cousera</li>
+                </ul>
+              </div>
 
-    <div class="max-width">
-        <h2 class="title">About me</h2>
-    <div class="about-content">
-         <div class="column left">
-             <img src="/images/WhatsApp Image 2022-04-18 at 9.25.45 AM.jpeg" alt="">
-         </div>
-
-         <div class="column right">
-             <div class="text">I'm Boateng and I'm a <span>Youtuber</span></div>
-             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, dolor. Dignissimos soluta quod distinctio tempora deleniti aliquid quos non iure quo unde quam beatae placeat impedit minus laboriosam nam, rem maxime ipsa ducimus facere id quasi sequi tenetur ex? Fugiat, omnis! Odio optio itaque possimus velit delectus quos autem hic consectetur explicabo, suscipit sed vitae reprehenderit, placeat eius. Ullam, aperiam.</p>
-             <a href="/images/MYCV(NEW).PDF.pdf">Download CV</a>
-         </div>
-    </div>
-    </div>
-    </section>
-
-    <!-- services section -->
-    <section class="services" id="services" >
-
-        <div class="max-width">
-            <h2 class="title">My services</h2>
-        <div class="service-content">
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-paint-brush"></i>
-                    <div class="text">Web Design</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vel doloremque vitae et, excepturi corporis!</p>
-                </div>
-            </div>
-    
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-chart-line"></i>
-                    <div class="text">Advertising</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vel doloremque vitae et, excepturi corporis!</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="box">
-                    <i class="fas fa-code"></i>
-                    <div class="text">App Design</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic vel doloremque vitae et, excepturi corporis!</p>
-                </div>
-            </div>
-            
         </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!---------------------------------------------Services-------------------------------------->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+
+        <div>
+          <i class="fas fa-code"></i>
+          <h2>Front end development</h2>
+          <p>He is a junior frontend developer with experience in HTML, CSS, and JavaScript. He has worked on various
+             projects including website design and development. He is knowledgeable in responsive design and has a passion for creating visually 
+            appealing and user-friendly websites. He is constantly seeking opportunities to improve his skills and deliver quality work to clients.</p>
+             <a href="#">Learn more</a>
         </div>
-        </section>
+
+        <div>
+          <i class="fas fa-crop-alt"></i>
+          <h2>UI/UX Designing</h2>
+          <p>Augustine Asante Boateng is a junior UI/UX developer with a passion for designing intuitive and user-friendly digital experiences.
+             He has experience in creating wireframes, prototypes, and conducting user research to validate design decisions. He has a strong eye
+              for design and is skilled in using Figma.
+             Augustine is dedicated to delivering exceptional experiences to users and continuously improving his skills in the field.</p>
+             <a href="#">Learn more</a>
+        </div>
+
+        <div>
+          <i class="fas fa-pen-nib"></i>
+          <h2>Graphic Designing</h2>
+          <p>He is a talented graphic designer with experience in creating visual designs for print and 
+            digital media. He has a strong understanding of color theory, typography, and composition. He is proficient in design 
+            with Adobe Photoshop.
+             Augustine is dedicated to creating eye-catching designs that effectively communicate the intended message to the target audience.</p>
+             <a href="#">Learn more</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!---------------------------------Portfolio------------------------->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+
+        <div class="work">
+          <img src="/images/rev Dan.png" alt="Digital Image">
+          <div class="layer">
+            <h3>Digital Painting</h3>
+            <p>Digital painting is the process of creating fine art or illustrations using digital tools. 
+              It is an increasingly popular medium for artists due to the flexibility and convenience offered by digital tools such as 
+              graphic tablets, stylus pens, and software like Adobe Photoshop. Digital painting allows artists to create and modify their work 
+              quickly and easily, 
+              and provides a wide range of effects and tools for creating unique and intricate pieces of art.</p>
+              <a href="https://www.instagram.com/p/CmPJus-sq05/?utm_source=ig_web_copy_link"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="/images/fante encylopidia.png" alt="Fante Encyclopidia">
+          <div class="layer">
+            <h3>UI/UX design (Fante Encyclopidae)</h3>
+            <p>UI/UX design focuses on creating user-centered digital experiences by designing interfaces that are intuitive,
+               efficient and visually appealing. It involves conducting user research, creating wireframes, prototypes, and designing the 
+               overall look and feel of a product. UI/UX design is an interdisciplinary field that combines elements of
+               graphic design, human-computer interaction and psychology to create digital products that are both functional and aesthetically pleasing.</p>
+              <a href="https://www.figma.com/proto/L3JlP3d2E43gjUoLEyObDs/group-9?scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2&node-id=1%3A2"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="/images/Portal.jpg" alt="UCC Portal Login Page">
+          <div class="layer">
+            <h3>UCC Portal Clone</h3>
+            <p>Frontend development involves the creation of the user interface of a website or application. It involves writing code in languages 
+              such as HTML, CSS, and JavaScript to build the visuals and interactivity of a website or application. Frontend developers ensure that 
+              the website or application is visually appealing, easy to use, and responsive to different devices and screen sizes. The goal of frontend
+               development
+               is to create an interface that provides a seamless user experience and effectively communicates the intended message to the target audience.</p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <a href="https://www.pinterest.com/asantea176/pins/" class="btn">See more</a>
+    </div>
+  </div>
+
+  <!---------------------------Contact-------------------------------->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p> <i class="fas fa-paper-plane"></i> asantea176@gmail.com</p>
+        <p> <i class="fas fa-phone-square-alt"></i> 0206861637</p>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/augustine-asante-boateng/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.pinterest.com/asantea176/pins/"> <i class="fab fa-pinterest"></i></a>
+          <a href="https://www.instagram.com/p/CmPJus-sq05/?utm_source=ig_web_copy_link"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/0206861637?"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <a href="/images/CURRICULUM VITAE updated.pdf" download class="btn btn2">Download CV</a>
+        </div>
+
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder= "Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p> copyright &copy Yaw Boateng</p>
+    </div>
+  </div>
 
 
-
-    <script src="/script.js">  </script>
+<script src="/script.js"> </script>
 </body>
 </html>

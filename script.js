@@ -1,19 +1,49 @@
-$(document).ready(function(){
-    $(window).scroll(function(){
-        if (this.scrollY > 20){
-        $('.navbar').addClass("sticky");
-        }else{
-        $('.navbar').removeClass("sticky");
-        }
-    });
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
 
-    //toggle menu using scripts
-$('.menu-btn').click(function(){
-    $('.navbar .menu').toggleClass("active");
-    //this helps the x close button comes
-    $('.menu-btn i').toggleClass("active");
-});
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
 
-});
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
 
 
+
+
+// ----------------------- displaying and closing sidemenu ----------------------------
+var sidemeu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemeu.style.right = "0";
+}
+
+function closemenu(){
+    sidemeu.style.right = "-200px";
+}
+
+//google forms script auth
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyZ31CrLXd73clYlKtLqJP6UHHc29KqvGMY8YKKFP_tOFwDzABV1IO06_qd3aKqQFRSoQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg");
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML=""
+        },5000)
+        form.reset()
+        })
+      })
+      .catch(error => console.error('Error!', error.message))
+  
